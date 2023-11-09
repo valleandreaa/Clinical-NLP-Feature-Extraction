@@ -1,0 +1,3 @@
+[DATA]
+rawdatapath = "data/raw/ClinNotes.csv"
+outputpath = "datasets/train_ner.json"

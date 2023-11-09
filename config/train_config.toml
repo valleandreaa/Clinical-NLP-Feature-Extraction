@@ -1,0 +1,36 @@
+[DATA]
+trainpath = "./datasets/train_ner.json"
+valpath = "datasets/train_ner.json"
+
+[TRAIN]
+bsize = 256
+# OPTIMIZER
+optim = "Adam"  # Adam or SGD
+lr = 0.0001
+epochs = 20
+wdecay = 0.00005
+
+# SCHEDULER
+end_factor = 0.1
+
+# EARLY STOP
+minlen = 100
+tolerance = 15
+
+# EVALUATION
+evaluate = true
+epoch_iter = 4
+
+
+[MODEL]
+depth = 2
+aggregate = "attentionpool"
+dropout = 0.2
+init_weights = false
+in_dim = 1024
+block_dim = 256
+out_dim = 256
+embedding_path = "resources/pretrained/embedding_biolinkbert.pt"
+tokenizer = "michiyasunaga/BioLinkBERT-large"
+vocab_size = 28895
+checkpoint = "./resources/checkpoints/run18/checkpoint_e0.pt"
