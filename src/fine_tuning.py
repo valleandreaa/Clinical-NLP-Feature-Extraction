@@ -10,6 +10,7 @@ from os.path import isfile, isdir, join
 from typing import List, Callable
 from torch.optim import Adam, SGD
 from torch.utils.data import DataLoader
+from data_loader import Dataset
 from torch.optim.lr_scheduler import LinearLR
 from pytorch_metric_learning.losses import MultiSimilarityLoss
 from pytorch_metric_learning.miners import MultiSimilarityMiner
@@ -185,14 +186,7 @@ def main(config: dict, cp_path: str, logdir: str, verbose: bool):
         miner = MultiSimilarityMiner(
             epsilon=tc["epsilon"]
         )
-    else:  # ontologicalloss
-        miner = MultiSimilarityMiner(
-            epsilon=tc["epsilon"]
-        )
-        loss_func = OntologicalTripletLoss(
-            ontopath=dc["ontopath"],
-            margin=tuple(tc["margin"])
-        )
+
 
     # optimizer setup
     if tc["optim"] == "Adam":

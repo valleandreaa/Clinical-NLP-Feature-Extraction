@@ -24,9 +24,7 @@ class BertClinicalConfigs:
 
 
 class Bert(nn.Module):
-    '''A lightweight model for entity linking and mention detection
-    ---
-    modified and adapted from https://doi.org/10.48550/arXiv.2109.02237
+    '''
     '''
 
     def __init__(self, config):
