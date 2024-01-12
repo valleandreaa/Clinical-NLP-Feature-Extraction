@@ -16,7 +16,14 @@ INTO TABLE patients
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(patient_id,first_name,last_name);
+(patient_id,last_name,age,gender,contact_information,emergency_contact);
+
+LOAD DATA LOCAL INFILE 'C:\\Users\\andreavalle\\Desktop\\clinical-notes\\datasets\\medications.csv'
+INTO TABLE medications_table
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(patient_id,medication_name,dosage,purpose);
 
 SET SQL_SAFE_UPDATES = 0;
 UPDATE clinical_notes

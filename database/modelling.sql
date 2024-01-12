@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS medications_table (
     medication_id INT AUTO_INCREMENT PRIMARY KEY,
     patient_id INT,
     medication_name VARCHAR(255),
-    dosage float,
+    dosage VARCHAR(10),
     purpose text
 );
 
