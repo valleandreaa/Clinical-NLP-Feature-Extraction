@@ -17,3 +17,8 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (patient_id,first_name,last_name);
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE clinical_notes
+SET case_num = patient_id;
+SET SQL_SAFE_UPDATES = 1;

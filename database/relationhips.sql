@@ -18,3 +18,6 @@ ADD FOREIGN KEY (patient_id) REFERENCES patients(patient_id);
 
 ALTER TABLE analysis_results_table
 ADD FOREIGN KEY (analysis_id) REFERENCES clinical_analysis_table(analysis_id);
+
+ALTER TABLE notes_summarization_table
+ADD FOREIGN KEY (note_id) REFERENCES clinical_notes(pn_num);

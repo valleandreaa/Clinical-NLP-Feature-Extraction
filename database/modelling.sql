@@ -2,8 +2,6 @@ CREATE DATABASE IF NOT EXISTS clinical_notes;
 
 USE clinical_notes;
 
-
-
 CREATE TABLE IF NOT EXISTS patients (
     patient_id INT, 
     first_name VARCHAR(255),
@@ -29,7 +27,8 @@ CREATE TABLE IF NOT EXISTS clinical_notes (
 CREATE TABLE IF NOT EXISTS clinical_analysis_table (
     analysis_id INT AUTO_INCREMENT PRIMARY KEY,
     note_id INT,
-    extracted_features VARCHAR(255),
+    entity VARCHAR(255),
+    text VARCHAR(255),
     date_analysis datetime
 );
 
@@ -70,3 +69,10 @@ CREATE TABLE IF NOT EXISTS analysis_results_table (
     entity_category VARCHAR(255)
 );
 
+CREATE TABLE IF NOT EXISTS notes_summarization_table (
+    summary_id INT AUTO_INCREMENT PRIMARY KEY,
+    note_id INT,
+    summary TEXT,
+    chr_text INT,
+    chr_sum INT
+);
