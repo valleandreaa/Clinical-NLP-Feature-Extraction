@@ -62,12 +62,7 @@ CREATE TABLE IF NOT EXISTS appointments_table (
 
 
 
-CREATE TABLE IF NOT EXISTS analysis_results_table (
-    result_id INT AUTO_INCREMENT PRIMARY KEY,
-    analysis_id INT,
-    entity  VARCHAR(255),
-    entity_category VARCHAR(255)
-);
+
 
 CREATE TABLE IF NOT EXISTS notes_summarization_table (
     summary_id INT AUTO_INCREMENT PRIMARY KEY,
