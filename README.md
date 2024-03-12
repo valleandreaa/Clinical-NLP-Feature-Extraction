@@ -38,3 +38,10 @@ We obtained our dataset from Kaggle, provided by the National Board of Medical E
 ## Conclusion
 
 In conclusion, the "DBM - Clinical Notes" project represents a comprehensive exploration of database management and clinical data analysis. The project successfully developed a robust database system leveraging NLP techniques for managing clinical notes efficiently. Integration with advanced visualization tools enhances the accessibility and utility of clinical data, empowering stakeholders to make informed decisions. This project sets a precedent for future endeavors in healthcare data management and analysis, emphasizing the importance of continuous learning and adaptation in the evolving landscape of data science and healthcare technology.
+
+## Installation
+To run this project locally, you need to install the required dependencies. You can do this by running the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
+```
